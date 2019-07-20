@@ -1,0 +1,20 @@
+$primary-color: #00e0d0;
+$secondary-color: #3c3062;
+$bg-filter: linear-gradient(90deg, #09052fcb, #311d5ec9 );
+$icon-filter: linear-gradient(90deg, #00e0d0, #4aa3cc);
+$splitter-color: #00000026;
+$grey-text: #666;
+
+@mixin background {
+    background: $bg-filter, url(../img/background.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+@mixin background-footer {
+    background: $bg-filter, url(../img/background-footer.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+@mixin easeOut {
+    transition: all 0.3s ease-out;
+}

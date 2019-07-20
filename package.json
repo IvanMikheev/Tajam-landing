@@ -1,0 +1,14 @@
+{
+  "name": "landing-tajam",
+  "version": "1.0.0",
+  "description": "example landing page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
