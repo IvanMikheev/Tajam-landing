@@ -345,10 +345,16 @@ header {
         img {
             width: 100%;
         }
+        .team-person {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
 
         .person-name {
-            margin-top: -5px;
+            
+            align-self: stretch;
             border: #fff6 solid 1px;
+            border-top: none;
             h4 {
                 margin-top: 10px;
                 padding: 10px;

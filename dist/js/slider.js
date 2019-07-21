@@ -2,17 +2,15 @@ function sliderInit(className, numToShow) {
     const centerSlide = Math.floor(numToShow / 2);
     const slides = document.querySelector(className);
     document.querySelector(className).classList.add('slider');
-    console.log(slides.children);
+    //console.log(slides.children);
     
     updateSlider(slides, numToShow, centerSlide);
 
 }
 
-
 function slide() {
 
 }
-
 
 function updateSlider(slides, numToShow, centerSlide) {
     let i = 0;

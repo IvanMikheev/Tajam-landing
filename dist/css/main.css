@@ -249,9 +249,13 @@ header {
     grid-gap: 30px; }
     .team-block img {
       width: 100%; }
+    .team-block .team-person {
+      display: grid;
+      grid-template-columns: 1fr; }
     .team-block .person-name {
-      margin-top: -5px;
-      border: #fff6 solid 1px; }
+      align-self: stretch;
+      border: #fff6 solid 1px;
+      border-top: none; }
       .team-block .person-name h4 {
         margin-top: 10px;
         padding: 10px;
