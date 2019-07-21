@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/211f2cc85f.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/211f2cc85f.js"></script>    
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/> -->
+    <link rel="stylesheet" href="css/main.css">
     <title>Tajam</title>
 </head>
 
 <body>
     <header>
         <div class="wrapper">
-            <nav class="menu">
+            <nav class="menu-nav">
                 <a href="index.html" class="logo"><i class="fab fa-connectdevelop"></i> tajam</a>
-                <ul>
-                    <li class="menu-item active">Home</li>
-                    <li class="menu-item">About</li>
-                    <li class="menu-item">Expertise</li>
-                    <li class="menu-item">Team</li>
-                    <li class="menu-item">Works</li>
-                    <li class="menu-item">People say</li>
-                    <li class="menu-item">Contacts</li>
+                <div class="menu-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Home</a></li>
+                    <li class="menu-item"><a href="#story">About</a></li>
+                    <li class="menu-item"><a href="#expertise">Expertise</a></li>
+                    <li class="menu-item"><a href="#team">Team</a></li>
+                    <li class="menu-item"><a href="#works">Works</a></li>
+                    <li class="menu-item"><a href="#reviews">People say</a></li>
+                    <li class="menu-item"><a href="#contact-us">Contacts</a></li>
                 </ul>
             </nav>
             <div class="header-main">
@@ -40,7 +47,7 @@
         </div>
     </header>
     <main>
-        <section class="story">
+        <section class="story" id="story">
             <div class="wrapper">
                 <i class="fab fa-connectdevelop"></i>
                 <div class="story-right">
@@ -64,7 +71,7 @@
             <div class="video-title">Watch our story</div>
         </section>
 
-        <section class="expertise">
+        <section class="expertise" id="expertise">
             <div class="wrapper">
                 <h2>Expertise</h2>
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
@@ -116,7 +123,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section class="team" id="team">
             <div class="wrapper">
                 <h2>Meet our amazing team</h2>
                 <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
@@ -156,7 +163,7 @@
             </div>
         </section>
 
-        <section class="works">
+        <section class="works" id="works">
             <div class="wrapper">
                 <h2>Our works</h2>
                 <a href="https://dribbble.com/" target="_blank">See All Project in Dribbble <i
@@ -179,11 +186,11 @@
             <button class="default-btn">Find More</button>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="wrapper">
                 <h2><i class="fas fa-quote-left"></i></h2>
                 <div class="reviews-group">
-                    <div class="review active">
+                    <div class="review active" data-index="1">
                         <p class="review-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae atque
                             facere nobis? Cum porro a quaerat eius voluptates minima. Quas totam deserunt voluptatum
                             saepe eos. Earum labore amet deleniti corrupti. Voluptatem, ab voluptatum. Officiis quaerat
@@ -195,7 +202,7 @@
                         <p class="review-name">Jane Galadriel</p>
                         <p class="review-spec">CEO</p>
                     </div>
-                    <div class="review hidden">
+                    <div class="review hidden" data-index="2">
                         <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In cumque
                             voluptate impedit doloribus autem itaque nostrum eius ad temporibus, beatae numquam.
                             Molestiae voluptas culpa explicabo quae sapiente voluptates nulla maxime nemo saepe hic
@@ -208,7 +215,7 @@
                         <p class="review-name">Jason Doe</p>
                         <p class="review-spec">Designer</p>
                     </div>
-                    <div class="review hidden">
+                    <div class="review hidden" data-index="3">
                         <p class="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
                             exercitationem sit iste id dolorem inventore maiores expedita repellat labore possimus quasi
                             minus praesentium quas eveniet voluptas ducimus maxime delectus perferendis adipisci quo
@@ -220,7 +227,7 @@
                         <p class="review-name">Kevin Smith</p>
                         <p class="review-spec">Programmer</p>
                     </div>
-                    <div class="review hidden">
+                    <div class="review hidden" data-index="4">
                         <p class="review-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius quidem
                             vero laboriosam obcaecati! Doloribus laudantium asperiores, animi dolore aspernatur iste,
                             nostrum dignissimos ullam voluptatem eveniet rerum, nihil velit. Debitis magni est adipisci
@@ -232,7 +239,7 @@
                         <p class="review-name">William Peterson</p>
                         <p class="review-spec">Art director</p>
                     </div>
-                    <div class="review hidden">
+                    <div class="review hidden" data-index="5">
                         <p class="review-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit est omnis
                             quidem repudiandae? Animi non alias id eius velit dolore sapiente quo expedita accusamus
                             saepe repudiandae veniam, est cum quos tempore quaerat beatae minima sint iure ad quibusdam
@@ -245,17 +252,18 @@
                         <p class="review-spec">Game designer</p>
                     </div>
                 </div>
-                <div id="review-slider">
+                <div class="review-slider">
+                    <img src="img/person1.jpg" alt="review">
+                    <img src="img/person2.jpg" alt="review">
+                    <img src="img/person3.jpg" alt="review">
                     <img src="img/person4.jpg" alt="review">
-                    <img src="img/person4.jpg" alt="review">
-                    <img src="img/person4.jpg" alt="review">
-                    <img src="img/person4.jpg" alt="review">
-                    <img src="img/person4.jpg" alt="review">
+                    <img src="img/person1.jpg" alt="review">
+                    <img src="img/person2.jpg" alt="review">
                 </div>
             </div>
         </section>
 
-        <section class="contact-us">
+        <section class="contact-us" id="contact-us">
             <div class="wrapper">
                 <div class="left-block">
                     <h3>Give us a good news</h3>
@@ -341,6 +349,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,216 @@
+@include mediaXl {
+        
+}
+
+@include mediaLg {
+    header {
+        .logo {
+            margin-left: 20px;
+        }        
+    }
+
+    .story .wrapper .story-right .story-description {
+        padding-right: 20px;
+    }
+    
+    .works .wrapper {
+        padding: 0 20px;
+    }
+
+    .contact-us {
+        .left-block {
+            margin-left: 20px;
+        }
+    }
+
+    footer .wrapper {
+        padding: 0  10px;
+    }
+}
+
+@include mediaMd {
+    header {
+        min-height: auto;
+
+        .wrapper .menu-nav .logo {
+            margin-top: 30px;
+            align-self: flex-start;
+        }
+
+        .menu-btn {
+            display: block;
+        }
+
+        .wrapper .menu-nav .menu {            
+            background: darken($secondary-color, 2);            
+            opacity: 0.8;            
+            flex-direction: column;
+            padding: 80px 30px 30px;
+            transform: translate3d(100%, 0, 0);
+            display: none;
+            
+
+            &.show {
+                display: flex;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .header-main {
+            height: auto;
+        }
+        padding-bottom: 50px;
+    }
+
+    .story {
+        .wrapper {
+            display: block;
+            text-align: center;
+            i {
+                display: none;
+            }
+            .story-right .story-description {
+                padding: 20px;
+                margin: 0;
+            }
+        }
+    }
+
+    .expertise .expertise-block {
+        .icon {
+            margin: 20px auto;
+        }
+        h4 {
+            padding: 0 10px;
+        }
+    }
+
+    .team {
+        h2, h3 {
+            padding: 0 10px;
+        }
+    
+        &-block {
+            grid-template-columns: 1fr 1fr;
+            width: 70%; 
+            margin: 40px auto 0;
+
+        }
+
+        &-text {
+            padding: 0 10px;
+        }
+    }
+
+    .works-group {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-us .wrapper {
+        grid-template-columns: 1fr;
+
+        .left-block {
+            margin-right: 20px;
+        }
+
+        .right-block {
+            display: none;
+        }
+    }
+
+    footer{
+        padding: 40px 0;
+
+        .wrapper {
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-menu {
+                flex-direction: column;
+
+                .copyright {
+                    margin-top: 30px;
+                    align-self: center;
+                }
+            }
+        }
+
+        
+    }
+    
+}
+
+@include mediaSm {
+   
+    header {
+        .wrapper .menu-nav .menu { 
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .header-main .header-description {
+            padding: 30px;        
+        }
+
+        
+    }
+    .expertise {
+        h3 {
+            padding: 0 10px;
+        }
+        
+        .expertise-block {
+            grid-template-columns: 1fr 1fr;
+
+            .expertise-item {
+                border-top: 1px solid $splitter-color;
+                border-left: 1px solid $splitter-color;
+
+                &:nth-child(-n + 2) {
+                    border-top: none;
+                }
+                &:nth-child(odd) {
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    .team-block {
+        width: 100%;
+    }
+
+    .works .wrapper {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .reviews {
+        padding: 40px 0;
+
+        .review {
+            margin-top: 20px;
+        }
+
+        .review-text {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .review-name {
+            margin-top: 20px;
+        }
+    }
+
+    
+
+
+}
