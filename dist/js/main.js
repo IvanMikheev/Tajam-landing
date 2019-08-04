@@ -1,4 +1,4 @@
-sliderInit('.review-slider', 5);
+'use strict';
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');

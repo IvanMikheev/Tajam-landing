@@ -1,5 +1,4 @@
 @import 'config';
-@import 'slider';
 
 * {
     box-sizing: border-box;
@@ -450,11 +449,15 @@ header {
         font-size: 40px;
     }
 
+    .reviews-group {
+        position: relative;        
+        margin: 50px auto 0;
+        width: 80%;        
+    }
+
     .review {
         color: #fff;
-        margin: 50px auto 0;
-        width: 80%;
-        @include easeOut;
+        transition: all .5s ease-in-out;
 
         &-text {
             font-family: 'Playfair Display', serif;
@@ -474,23 +477,109 @@ header {
             font-size: 12px;
             margin-top: 5px;
         }
+
+        &.hidden {
+            opacity: 0; 
+            height: 0;
+            overflow: hidden;
+        }
+
+        &.active {
+            opacity: 1;
+            height: auto;
+        }
     }
 
-    .hidden {
-        display: none;
-    }
 
     .review-slider {
         margin-top: 30px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 20px;
+        
 
-        img {
-            border-radius: 50%;
-            width: 50px;
-            padding: 7px;
+        .slider {
+            &-active {
+                width: 70px !important;
+            }
+        
+            &-hide {
+                display: none;
+            }
+        
+            &-show {
+                display: block;
+            }
+        }
+
+        .slider-container {
+            overflow: hidden;
+        }
+
+        .slider-wrapper {
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 70px; 
+
+            .slider-item {
+                transition: width .5s ease-in-out;
+                border-radius: 50%;
+                width: 50px;
+                padding: 7px;
+            }
+        }
+
+        .slider-control {            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: .5; 
+            padding: 10px;
+            color: #fff;
+
+            &:hover, &:focus {
+                text-decoration: none;
+                outline: 0;
+                opacity: .9; 
+            }            
+        }
+
+        .slider-indicators {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            list-style: none;
+                
+            li {
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 7px;
+                height: 7px;
+                margin: 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                background-color: #fff;
+                background-clip: padding-box;
+                opacity: .5;
+                transition: opacity .6s ease;
+
+                &:hover {
+                    opacity: .7;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }      
         }
     }
 }
@@ -526,6 +615,7 @@ header {
 
                 textarea {
                     height: 140px;
+                    resize: none;
                 }
 
                 .default-btn {
@@ -723,3 +813,4 @@ footer {
 }
 
 @import 'mobile';
+@import 'slider';
