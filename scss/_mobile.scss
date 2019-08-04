@@ -196,7 +196,10 @@
     .reviews {
         padding: 40px 0;
 
-        .review {
+        .reviews-group {
+            margin-top: 20px;
+        }
+        .review.active {
             margin-top: 20px;
         }
 

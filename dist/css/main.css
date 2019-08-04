@@ -649,7 +649,9 @@ footer {
     justify-content: space-evenly; }
   .reviews {
     padding: 40px 0; }
-    .reviews .review {
+    .reviews .reviews-group {
+      margin-top: 20px; }
+    .reviews .review.active {
       margin-top: 20px; }
     .reviews .review-text {
       line-height: 1.5;
