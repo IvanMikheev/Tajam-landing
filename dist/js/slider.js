@@ -88,7 +88,7 @@ function slideText(nextIndex) {
 }
 
 function slidePhotos(nextIndex) {
-    transform = -nextIndex * itemWidth + startPosition;    
+    transform = startPosition - nextIndex * itemWidth;    
     sliderWrapper.style.transform = 'translateX(' + transform + 'px)';
     items[currentIndex].item.classList.toggle('slider-active');
     items[nextIndex].item.classList.toggle('slider-active');
